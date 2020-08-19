@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Caja Registradora</title>
+</head>
+
+<body>
+    <audio id="sonido">
+        <source src="Canción/SD_NAVIGATE_52.mp3">
+    </audio>
+
+    <div class="container fondo">
+        <div class="container bg-secondary ">
+            <h1 class="text-center titulo">Caja Registradora </h1>
+        </div>
+        <div class="TODO">
+            <!-- Mesa -->
+            <!-- Tablon de la Mesa -->
+            <div class="mesa chau">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="trapeciomesa">
+                    </div>
+                </div>
+                <!-- Borde de la Mesa -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="bordemesa"></div>
+                </div>
+                <!-- Patas de la Mesa -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="patademesa1"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="patademesa2"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="patademesa3"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="patademesa4"></div>
+                </div>
+            </div>
+            <!-- Caja Registradora -->
+            <div class="cajaentera">
+                <!-- Rectángulo -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="rectangulo d-flex align-items-center justify-content-center">
+                        <!-- Logo -->
+                        <div class="container-logo">
+                            <img class="rclogo"
+                                src="https://rollingcodeschool.com/wp-content/uploads/2020/05/Logo-Completo-BLANCO-RollingoCode.fw_.png"
+                                alt="logo-rc">
+                        </div>
+                        <!-- Pantalla -->
+                        <div class="display d-flex align-items-center justify-content-center" id="display">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Trapecio -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="trapecio d-flex align-items-center justify-content-center">
+                        <div class="row">
+                            <!-- Ticket -->
+                            <div class="col-6 box">
+                                <div class="box-ticket">
+                                    <div class="ticket">----<br>-----</div>
+                                </div>
+                                <!-- Barra de Apoyo del Ticket -->
+                                <div class="barrita"></div>
+                            </div>
+                            <!-- Teclado -->
+                            <div class="col-6">
+                                <div class="row teclado">
+                                    <div class="col-12">
+                                        <button onclick="ac(), sonido.play()" class="reset bg-danger botones">C</button>
+                                        <button onclick="dividir(), sonido.play()" class="division botones">/</button>
+                                        <button onclick="multiplicar(), sonido.play()"
+                                            class="multiplicacion botones">*</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button onclick="presionarNumero('7'), sonido.play()"
+                                            class="siete botones">7</button>
+                                        <button onclick="presionarNumero('8'), sonido.play()"
+                                            class="ocho botones">8</button>
+                                        <button onclick="presionarNumero('9'), sonido.play()"
+                                            class="nueve botones">9</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button onclick="presionarNumero('4'), sonido.play()"
+                                            class="cuatro botones">4</button>
+                                        <button onclick="presionarNumero('5'), sonido.play()"
+                                            class="cinco botones">5</button>
+                                        <button onclick="presionarNumero('6'), sonido.play()"
+                                            class="seis botones">6</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button onclick="presionarNumero('1'), sonido.play()"
+                                            class="uno botones">1</button>
+                                        <button onclick="presionarNumero('2'), sonido.play()"
+                                            class="dos botones">2</button>
+                                        <button onclick="presionarNumero('3'), sonido.play()"
+                                            class="tres botones">3</button>
+                                    </div>
+                                    <div class="col-12">
+
+                                        <button onclick="presionarNumero('0'), sonido.play()"
+                                            class="cero botones botoncero">0</button>
+                                        <button onclick="presionarNumero('.'), sonido.play()"
+                                            class="igual botones">.</button>
+                                    </div>
+                                </div>
+                                <div class="row teclado2">
+                                    <div class="col-12">
+                                        <button onclick="restar(), sonido.play()" class="resta botones">-</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button onclick="sumar(''), sonido.play()"
+                                            class="suma botones botonmas">+</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button onclick="calcular(), sonido.play()"
+                                            class="igual botones botonigual bg-success">=</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pill -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="pill rounded-pill">
+
+                    </div>
+                </div>
+                <!-- Mini Trapecio -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="trapeciomini">
+
+                    </div>
+                </div>
+                <!-- PseudoPill -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="pseudopill">
+
+                    </div>
+                </div>
+                <!-- Penúltimo Rectángulo -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="rectangulo2 d-flex align-items-center justify-content-between">
+                        <div class="row d-flex align-items-center">
+                            <!-- Línea de la izquierda -->
+                            <div class="linea"></div>
+                            <!-- Círculo pequeño -->
+                            <div class="circulito d-flex align-items-center justify-content-center">
+                                <!-- Línea pequeña del medio del círculo -->
+                                <div class="linea-chiquita"></div>
+                            </div>
+                            <!-- Línea de la derecha -->
+                            <div class="linea2"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Último rectángulo -->
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="rectangulo3 d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ¿Escaner? -->
+        <scanner>
+            <div class="scanner" style="width:100px; height: 100px;">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="semipill">
+                        <div class="agujero">
+                            <div class="animation slide-in-bck-center slide-out-fwd-center"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="trapecioescaner">
+                        <div class="trapecioescanerdentro">
+                            <div class="borde"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="paloescaner">
+                        <div class="paloescanerdentro">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="botonescaner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="unioncable"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="unioncable2"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="cable"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable1"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable2"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable3"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable4"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable5"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable6"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable7"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable8"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable9"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable10"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable11"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable12"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable13"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable14"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable15"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable16"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable17"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable18"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable19"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable20"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable21"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable22"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable23"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable24"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="dobladadecable25"></div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="cable2"></div>
+                </div>
+            </div>
+        </scanner>
+        <br>
+    </div>
+    <div class="container bg-secondary">
+        <h1 class="text-center titulo2">Caja Registradora</h1>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="CajaRegistradora.js"></script>
+</body>
+
+</html>
